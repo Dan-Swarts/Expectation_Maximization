@@ -18,4 +18,8 @@ Then we use k-means clustering to find k pixel clusters
 
 # EM Algorithm
 
-to this point, we have assumed that the colors are independent from one another. that is, it follows k independent normal distributions.  
+to this point, we have assumed that the colors are independent from one another. that is, it follows k independent normal distributions. However we use the EM algorithm to account for correlation between the different distributions. 
+
+The expectation step will calulate the "responsibility" of each pxiel to its cluster, or the probability that the pixel belongs to each cluster. 
+
+in the maximization step, we then update the covariance matrix of the multivariate distribution to maximize the probability that these pixels exist this way.
